@@ -1,0 +1,42 @@
+/*general*/
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Monaco,微軟正黑體,Microsoft JhengHei,Hiragino Sans,Heiti TC,黑體,SimHei,標楷體,DFKai-SB,BiauKai,全字庫正楷體,TW-Kai,'Source Sans Pro', Helvetica, sans-serif;
+}
+a{
+	text-decoration: none;
+	display: inline-block;
+	color: #7DACFC;
+}
+a:hover{
+	color: #B9EC2D;
+}
+a:active{
+	font-weight: bold;
+}
+header::after,
+main::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.pages,
+.pages:target~.pages:last-of-type{
+	display: none;
+}
+.pages:target,
+.pages:last-of-type{
+	display: block;
+}
+#go-down{
+	position: fixed;
+}
+#go-down img{
+	opacity: 0.7;
+}
+/*for Firefox and IE*/
+details,
+summary{
+	display: block;
+}

@@ -1,0 +1,59 @@
+var myButton = document.getElementsByClassName("class1")[0];
+var myButton = document.getElementById("id_01");
+
+myButton1.onclick = function() {
+  
+}
+
+myButton5.onclick = function() {
+  myHeading.textContent = 'User Changed!';
+}
+
+parseFloat(myInput1.value);
+parseInt(myInput1.value,10);
+
+myButton2.onclick = function() {
+  myUser.textContent = myUserName.value;
+}
+
+
+<input type="number" id="in1" step="0.1">
++
+<input type="number" id="in2">
+=
+<p id="sum"></p>
+
+運算子	說明	符號	範例
+相加／連接	用於將兩個數字相加，或是將兩個字串連接在一起。	+	6 + 9;
+"Hello " + "world!";
+減、乘、除
+
+這些運算子就跟基礎數學計算中在做的事情相同。	-, *, /	9 - 3;
+8 * 2; // 在 JavaScript 中，相乘運算子是個星號
+9 / 3;
+指定運算子	您已經見過她了：這可以將一個數值指定給一個變數。	=	var myVariable = 'Bob';
+等價運算子	測試兩個數值是否相等，並且回傳一個 true/false 的結果。	===	var myVariable = 3;
+myVariable === 4;
+否定、不相等	通常會跟相等運算子搭配使用，否定運算子在 JavaScript 中代表邏輯非（NOT）—她可以將 true 轉換為 false ……等。	!, !==	
+第一個敘述句回傳的是 true，但我們使否定運算子，使得對照組的敘述句回傳了 false：
+
+var myVariable = 3;
+!(myVariable === 3);
+
+在這裏，我們測試了「myVariable 是否不等於 3」的一個敘述。這個敘述回傳的是 false，因為她確實等於 3。
+
+var myVariable = 3;
+myVariable !== 3;
+
+
+
+
+條件（Conditionals）區段
+條件是種程式碼結構，可以讓您測試某個陳述式會不會回傳真值，並根據不同的結果執行不同程式碼。最常見的形式是 if ... else 。以下是一個範例：
+
+var iceCream = 'chocolate';
+if (iceCream === 'chocolate') {
+  alert('Yay, I love chocolate ice cream!');    
+} else {
+  alert('Awwww, but chocolate is my favorite...');    
+}

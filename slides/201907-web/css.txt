@@ -1,0 +1,157 @@
+*{
+    margin: 0px;
+}
+
+盒子邊界
+margin-top: 16px 1em 100%;
+margin-left
+margin-right
+margin-bottom
+border-top
+border-left
+border-right
+border-bottom
+padding-top
+padding-left
+padding-right
+padding-bottom
+content-top
+content-left
+content-right
+content-bottom
+
+背景圖片
+background-color: #RRGGBB;
+background-image: url("網址");
+background-size: cover;
+-auto		Default value. The background image is displayed in its original size	
+-length		Sets the width and height of the background image. The first value sets the width, the second value sets the height. If only one value is given, the second is set to "auto". Read about length units	
+-percentage	Sets the width and height of the background image in percent of the parent element. The first value sets the width, the second value sets the height. If only one value is given, the second is set to "auto"	
+-cover		Resize the background image to cover the entire container, even if it has to stretch the image or cut a little bit off one of the edges	
+-contain	Resize the background image to make sure the image is fully visible	
+-initial	Sets this property to its default value. Read about initial	
+-inherit	Inherits this property from its parent element. Read about inherit
+background-position: center center;
+left top
+left center
+left bottom
+right top
+right center
+right bottom
+center top
+center center
+center bottom
+-------------------------
+文字格式
+
+字型font-family
+Georgia
+Palatino Linotype
+Book Antiqua
+Times New Roman
+Arial
+Helvetica
+Arial Black
+Impact
+Lucida Sans Unicode
+Tahoma
+Verdana
+Courier New
+Lucida Console
+initial
+
+大小font-size
+medium	Sets the font-size to a medium size. This is default	
+xx-small	Sets the font-size to an xx-small size	
+x-small	Sets the font-size to an extra small size	
+small	Sets the font-size to a small size	
+large	Sets the font-size to a large size	
+x-large	Sets the font-size to an extra large size	
+xx-large	Sets the font-size to an xx-large size	
+smaller	Sets the font-size to a smaller size than the parent element	
+larger	Sets the font-size to a larger size than the parent element	
+length	Sets the font-size to a fixed size in px, cm, etc. Read about length units	
+%	Sets the font-size to a percent of  the parent element's font size	
+initial	Sets this property to its default value. Read about initial	
+inherit
+
+粗細font-weight
+normal	Defines normal characters. This is default	
+bold	Defines thick characters	
+bolder	Defines thicker characters	
+lighter	Defines lighter characters	
+100
+200
+300
+400
+500
+600
+700
+800
+900	Defines from thin to thick characters. 400 is the same as normal, and 700 is the same as bold	
+initial	Sets this property to its default value. Read about initial	
+inherit
+
+傾斜font-style
+normal	The browser displays a normal font style. This is default	
+italic	The browser displays an italic font style	
+oblique	The browser displays an oblique font style	
+initial	Sets this property to its default value. Read about initial	
+inherit
+
+顏色color
+
+位置text-align
+left	Aligns the text to the left	
+right	Aligns the text to the right	
+center	Centers the text	
+justify	Stretches the lines so that each line has equal width (like in newspapers and magazines)	
+initial	Sets this property to its default value. Read about initial	
+inherit
+
+利用盒子排版
+display: inline; inline/block/inline-block
+inline	Displays an element as an inline element (like <span>). Any height and width properties will have no effect	
+block	Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width	
+contents	Makes the container disappear, making the child elements children of the element the next level up in the DOM	
+flex	Displays an element as a block-level flex container	
+grid	Displays an element as a block-level grid container	
+inline-block	Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values	
+inline-flex	Displays an element as an inline-level flex container	
+inline-grid	Displays an element as an inline-level grid container	
+inline-table	The element is displayed as an inline-level table	
+list-item	Let the element behave like a <li> element	
+run-in	Displays an element as either block or inline, depending on context	
+table	Let the element behave like a <table> element	
+table-caption	Let the element behave like a <caption> element	
+table-column-group	Let the element behave like a <colgroup> element	
+table-header-group	Let the element behave like a <thead> element	
+table-footer-group	Let the element behave like a <tfoot> element	
+table-row-group	Let the element behave like a <tbody> element	
+table-cell	Let the element behave like a <td> element	
+table-column	Let the element behave like a <col> element	
+table-row	Let the element behave like a <tr> element	
+none	The element is completely removed	
+initial	Sets this property to its default value. Read about initial	
+inherit
+
+position: static; static/relative/absolute/fixed
+static:瀏覽器預設
+static 是預設值。任何套用position: static;的元素「不會被特別定位」在頁面上特定位置，
+而是照著瀏覽器預設的配置自動排版在頁面上，所有其他的屬性值都代表該元素會被定位在頁面上。
+-static	Default value. Elements render in order, as they appear in the document flow
+relative:相對位置
+-relative	The element is positioned relative to its normal position, so "left:20px" adds 20 pixels to the element's LEFT position
+fixed:絕對位置
+-fixed	The element is positioned relative to the browser window
+absolute:相對於它的父元素進行定位
+-absolute	The element is positioned relative to its first positioned (not static) ancestor element	
+
+-sticky	The element is positioned based on the user's scroll position
+A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
+
+Note: Not supported in IE/Edge 15 or earlier. Supported in Safari from version 6.1 with a -webkit- prefix.	
+-initial	Sets this property to its default value. Read about initial	
+-inherit
+
+z-index: 5; 1/2/3/... 0(default) -1/-2/-3/...

@@ -1,0 +1,528 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>web</title>
+		<meta name="og:title" content="html">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<link rel="stylesheet" href="../css/reveal.css">
+		<link rel="stylesheet" href="../css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="../lib/css/zenburn.css">
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../css/print/pdf.css' : '../css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section>
+						<h1>web:html/css/js</h1>
+						<h6>2019/07/10</h6>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>目錄</h1>
+						<ul style="list-style-type:disc;">
+							<li>Meta</li>
+							<li>區塊</li>
+							<li>文字、圖片、清單、表格、超連結</li>
+							<li>盒子、顏色、背景圖片、文字格式</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>HTML</h1>
+						<p>HyperText Markup Language</p>
+					</section>
+					<section>
+						<h2>Meta</h2>
+						<p>codepen !tab</p>
+						<pre><code class=hljs>
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+  &lt;meta charset="UTF-8">
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+  &lt;meta http-equiv="X-UA-Compatible" content="ie=edge">
+  &lt;title>Document&lt;/title>
+&lt;/head>
+&lt;body>
+  
+&lt;/body>
+&lt;/html>
+						</code></pre>
+					</section>
+					<section>
+						<h2>Meta</h2>
+						<ul style="list-style-type:disc;">
+							<li>description 網頁簡短描述</li>
+							<li>keywords 網頁關鍵字</li>
+							<li>author 作者</li>
+							<li>generator 編輯器</li>
+							<li>copyright 網頁版權</li>
+							<li>distribution 網頁發布地區</li>
+						</ul>
+						<pre><code class=hljs>
+&lt;meta name="description" content="網頁簡短描述">
+						</code></pre>
+					</section>
+					<section>
+						<h2>小試身手-0</h2>
+						<p>更改網頁的標題</p>
+					</section>
+					<section>
+						<h2>註解</h2>
+						<pre><code class=hljs>
+&lt;!-- 註解內容 -->
+						</code></pre>
+					</section>
+					<section>
+						<h2>快捷鍵</h2>
+						<ul style="list-style-type:disc;">
+							<li>打完標籤名稱 按tab: 將標籤快速完成</li>
+							<li>游標所在行或選取文字後 按ctrl+/: 註解</li>
+							<li>選取一串文字按tab: 縮排</li>
+							<li>選取一串文字按shift+tab: 反縮排</li>
+						</ul>
+					</section>
+					<section>
+						<h2>今日目標</h2>
+						<p>自我介紹網頁</p>
+						<!--<img src="" alt="自我介紹網頁圖">-->
+					</section>
+					<section>
+						<h2>今日目標</h2>
+						<p>自我介紹</p>
+						<ul style="list-style-type:disc;">
+							<li>姓名等基本個人資料 ->清單</li>
+							<li>照片 ->圖</li>
+							<li>學經歷、專業能力 ->有數字清單</li>
+							<li>興趣、自我介紹、專長 ->表格、文字</li>
+							<li>個人社群 ->超連結</li>
+						</ul>
+					</section>
+					<section>
+						<h2>標籤</h2>
+						<img src="tag.png" alt="架構圖">
+					</section>
+					<section>
+						<h2>區塊</h2>
+						<p>大多以&lt;div>&lt;/div>表示</p>
+						<p>加上class、id區分</p>
+					</section>
+					<section>
+						<h2>class vs. id</h2>
+						<p></p>
+						<!--<ul style="list-style-type:disc;">
+							<li></li>
+						</ul>-->
+						<!--<img src="" alt="classid圖">-->
+					</section>
+					<section>
+						<h2>小試身手-1</h2>
+						<ol>
+							<li>新增五個&lt;div>標籤的頭尾</li>
+							<li>第一個給class="header"</li>
+							<li>第二個給class="about"</li>
+							<li>第三個給class="experience"</li>
+							<li>第四個給class="intro"</li>
+							<li>第五個給class="footer"</li>
+						</ol>
+						<img src="div5.png" width="600" height="300" alt="小試身手-1">
+					</section>
+					<section>
+						<h2>標題文字</h2>
+						<ul style="list-style-type:disc;">
+							<li>標題: &lt;h1>最大的標題&lt;/h1></li>
+							<li>標題: &lt;h6>最小的標題&lt;/h6></li>
+							<li>文字: &lt;p>一般的文字&lt;/p></li>
+							<li>換行: &lt;br></li>
+							<li>水平分隔線: &lt;hr></li>
+						</ul>
+					</section>
+					<section>
+						<h2>小試身手-2.1</h2>
+						<ol>
+							<li>在&lt;div class="header">，幫你的網站用&lt;h1>到&lt;h6>任選標籤加上標題</li>
+							<li>在&lt;div class="intro">裡用文字標籤&lt;p>打上一段自我介紹</li>
+						</ol>
+					</section>
+					<section>
+						<h2>圖片</h2>
+						<ul style="list-style-type:disc;">
+							<li>src</li>
+							<li>width</li>
+							<li>height</li>
+							<li>alt</li>
+						</ul>
+						<pre><code class=hljs>
+&lt;img src="超連結" width="寬度" height="高度" alt="替代文字">
+						</code></pre>
+					</section>
+					<section>
+						<h2>圖片-超連結</h2>
+						<ul style="list-style-type:disc;">
+							<li>電腦中的圖片:src="D:/test.png"</li>
+							<li>網路圖片:src="url"</li>
+						</ul>
+					</section>
+					<section>
+						<h2>小試身手-2.2</h2>
+						<ol>
+							<li>從網路上找一張你自己/代表你的照片</li>
+							<li>複製圖片的連結</li>
+							<li>放到class是about的div中並設定好alt</li>
+							<li>長寬屬性可不設定</li>
+						</ol>
+					</section>
+					<section>
+						<h2>清單</h2>
+						<ul style="list-style-type:disc;">
+							<li>ul : unordered list</li>
+							<li>ol : ordered list</li>
+						</ul>
+						<pre><code class=hljs>
+&lt;ul>
+	&lt;li>沒有數字順序的清單&lt;/li>
+	&lt;li>就是 unordered list&lt;/li>
+&lt;/ul>
+
+&lt;ol>
+	&lt;li>有數字順序的清單&lt;/li>
+	&lt;li>就是 ordered list&lt;/li>
+&lt;/ol>
+						</code></pre>
+					</section>
+					<section>
+						<h2>小試身手-2.3</h2>
+						<ul style="list-style-type:disc;">
+							<li>在&lt;div class="experience">裡用&lt;ol>或&lt;ul>打上你的學經歷</li>
+						</ul>
+					</section>
+					<section>
+						<h2>表格</h2>
+						<pre><code class=hljs>
+&lt;table border="1">
+	&lt;caption>表格標題&lt;/caption>
+
+	&lt;tr>&lt;td>第一直欄&lt;/td>&lt;td>第二直欄&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>這都是在&lt;/td>&lt;td>同一橫列&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>這邊都是&lt;/td>&lt;td>第三橫列&lt;/td>&lt;/tr>
+&lt;/table>
+						</code></pre>
+					</section>
+					<section>
+						<h2>小試身手-2.4</h2>
+						<ul style="list-style-type:disc;">
+							<li>在&lt;div class="intro">裡用&lt;table>新增專長與興趣</li>
+						</ul>
+					</section>
+					<section>
+						<h2>表格</h2>
+						<pre><code class=hljs>
+&lt;table border="1">
+	&lt;caption>表格標題&lt;/caption>
+
+	&lt;tr>&lt;td colspan="2">第一列&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td rowspan="2">合在一起了&lt;/td>&lt;td>第二列&lt;/td>&lt;/tr>
+	&lt;tr>&lt;td>第三列&lt;/td>&lt;/tr>
+&lt;/table>
+						</code></pre>
+					</section>
+					<section>
+						<h2>小試身手-2.5</h2>
+						<ul style="list-style-type:disc;">
+							<li>把表格<del>變成你的形狀</del>換成你喜歡的樣子</li>
+							<li>Bonus:把剛剛打的自我介紹放入表格中</li>
+						</ul>
+					</section>
+					<section>
+						<h2>超連結</h2>
+						<pre><code class=hljs>
+&lt;a href="連結網址" target="_blank">顯示在網頁上的文字&lt;/a>
+&lt;a href="連結網址" target="_blank">&lt;img src="圖片的超連結">&lt;/a>
+						</code></pre>
+					</section>
+					<section>
+						<h2>小試身手-2.6</h2>
+						<ol>
+							<li>在&lt;div class="footer">加入超連結，連到任何一個你想連到的地方</li>
+							<li>Bonus:加入圖片超連結</li>
+						</ol>
+					</section>
+					<section>
+						<h2>休息一下</h2>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>CSS</h1>
+						<p>Cascading Style Sheets</p>
+					</section>
+					<section>
+						<h2>選擇器</h2>
+						<p>套用最精準、最小單位、後寫的選擇器</p>
+						<ul style="list-style-type:disc;">
+							<li>選擇全部 *{}</li>
+							<li>選擇特定class .intro{}</li>
+							<li>選擇特定id #abc{}</li>
+							<li>選擇特定標籤 div{}</li>
+							<li>選擇特定標籤的特定class div.pink{}</li>
+						</ul>
+						<pre><code class=hljs>
+*{
+    margin: 0px;
+}
+						</code></pre>
+					</section>
+					<section>
+						<h2>盒子</h2>
+						<img src="box.png" width="600" height="300" alt="box">
+					</section>
+					<section>
+						<h2>盒子</h2>
+						<ul style="list-style-type:disc;">
+							<li>margin</li>
+							<li>border</li>
+							<li>padding</li>
+						</ul>
+						<p>上 右 下 左/上 左右 下/上下 左右/上下左右</p>
+						<pre><code class=hljs>
+margin: 0px 0px 0px 0px;
+margin: 0px 0px 0px;
+margin: 0px 0px;
+margin: 0px;
+						</code></pre>
+					</section>
+					<section>
+						<h2>盒子</h2>
+						<p>單獨調整</p>
+						<ul style="list-style-type:disc;">
+							<li>margin-top</li>
+							<li>margin-left</li>
+							<li>margin-right</li>
+							<li>margin-bottom</li>
+							<li>padding-top</li>
+							<li>padding-left</li>
+							<li>padding-right</li>
+							<li>padding-bottom</li>
+						</ul>
+						<pre><code class=hljs>
+margin-top: 0px;
+						</code></pre>
+					</section>
+					<section>
+						<h2>顏色</h2>
+						<p>https://coolors.co</p>
+						<ul style="list-style-type:disc;">
+							<li>background-color</li>
+							<li>color</li>
+						</ul>
+						<pre><code class=hljs>
+background-color: #RRGGBB;
+						</code></pre>
+					</section>
+					<section>
+						<h2>背景圖片</h2>
+						<ul style="list-style-type:disc;">
+							<li>background-image</li>
+							<li>background-size</li>
+							<li>background-position</li>
+						</ul>
+						<pre><code class=hljs>
+background-image: url("網址");
+background-size: cover;
+background-position: center center;
+						</code></pre>
+					</section>
+					<section>
+						<h2>文字格式</h2>
+						<p></p>
+						<ul style="list-style-type:disc;">
+							<li>字型font-family</li>
+							<li>大小font-size</li>
+							<li>粗細font-weight</li>
+							<li>傾斜font-style</li>
+							<li>顏色color</li>
+							<li>位置text-align</li>
+						</ul>
+					</section>
+					<section>
+						<h2>其他排版方式</h2>
+						<ul style="list-style-type:disc;">
+							<li>display(inline/block/inline-block/...)</li>
+							<li>position(static/relative/absolute/fixed/...)</li>
+							<li>z-index(1/2/3/...)</li>
+							<li>top left right bottom</li>
+						</ul>
+						<pre><code class=hljs>
+display: inline;
+position: static;
+z-index: 5;
+						</code></pre>
+					</section>
+				</section>
+
+
+				<section>
+					<section>
+						<h1>JS</h1>
+						<p>JavaScript</p>
+					</section>
+					<section>
+						<h2>button</h2>
+						<p>以HTML產生按鍵</p>
+						<button>這是按鍵</button>
+						<pre><code class=hljs>
+&lt;button>BUTTON&lt;/button>
+						</code></pre>
+					</section>
+					<section>
+						<h2>註解</h2>
+						<pre><code class=hljs>
+//單行註解
+
+/*
+這是
+跨行註解
+*/
+						</code></pre>
+					</section>
+					<section>
+						<h2>產生物件</h2>
+						<p>var</p>
+						<pre><code class=hljs>
+var myButton;
+						</code></pre>
+					</section>
+					<section>
+						<h2>產生物件</h2>
+						<ul style="list-style-type:disc;">
+							<li>getElementById</li>
+							<li>getElementsByClassName</li>
+						</ul>
+						<pre><code class=hljs>
+var myButton1 = document.getElementById("id_01");
+var myButton2 = document.getElementsByClassName("class1")[0];
+						</code></pre>
+					</section>
+					<section>
+						<h2>onclick</h2>
+						<pre><code class=hljs>
+myButton.onclick = function(){
+
+}
+						</code></pre>
+					</section>
+					<section>
+						<h2>textContent</h2>
+						<pre><code class=hljs>
+myButton.onclick = function(){
+  myText.textContent = "button pressed!";
+}
+						</code></pre>
+					</section>
+					<section>
+						<h2>input</h2>
+						<p>以HTML產生input</p>
+						<input placeholder="請輸入文字">
+						<pre><code class=hljs>
+&lt;input placeholder="請輸入文字">
+						</code></pre>
+					</section>
+					<section>
+						<h2>value</h2>
+						<pre><code class=hljs>
+myButton.onclick = function() {
+  myUserNow.textContent = myUserName.value;
+}
+						</code></pre>
+					</section>
+					<section>
+						<h2>parse</h2>
+						<pre><code class=hljs>
+parseInt(myInput1.value,10);
+parseFloat(myInput1.value);
+						</code></pre>
+					</section>
+					<section>
+						<h2>Operators</h2>
+						<ul style="list-style-type:disc;">
+							<li>+</li>
+							<li>-</li>
+							<li>*</li>
+							<li>/</li>
+							<li>=</li>
+							<li>===</li>
+							<li>!</li>
+							<li>!==</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Conditionals</h2>
+						<p>if else</p>
+						<pre><code class=hljs>
+if(parseInt(myInput1.value,10)>10) {
+  
+} else {
+ 
+}
+						</code></pre>
+					</section>
+					<section>
+						<h2>Functions</h2>
+						<pre><code class=hljs>
+function multiply(num1,num2) {
+  var result = num1 * num2;
+  return result;
+}
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>END</h1>
+						<a href="https://www.w3schools.com/" target="_blank">https://www.w3schools.com/</a>
+					</section>
+				</section>
+			</div>
+		</div>
+		<script src="../lib/js/head.min.js"></script>
+		<script src="../js/reveal.js"></script>
+		<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+			transition: 'slide', // none/fade/slide/convex/concave/zoom
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '../plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: '../plugin/zoom-js/zoom.js', async: true },
+				{ src: '../plugin/notes/notes.js', async: true }
+			]
+		});
+		</script>
+	</body>
+</html>
